@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 
 # Set the page title and icon
 st.set_page_config(page_title="Growth Mindset Challenge", page_icon="✪")
@@ -45,6 +46,21 @@ else:
     st.info("💖 Big or small, every achievement counts! Share one now!")
 
 st.markdown("---")
+
+# Need More Motivation Button
+st.header("💡 Need More Motivation?")
+motivational_quotes = [
+    "Believe you can and you're halfway there. - Theodore Roosevelt",
+    "Your limitation—it's only your imagination.",
+    "Push yourself, because no one else is going to do it for you.",
+    "Great things never come from comfort zones.",
+    "Dream it. Wish it. Do it.",
+    "Success doesn’t just find you. You have to go out and get it.",
+    "The harder you work for something, the greater you’ll feel when you achieve it."
+]
+
+if st.button("✨ Inspire Me! ✨"):
+    st.success(random.choice(motivational_quotes))
 
 # Final motivation message
 st.write("🌱 Keep trusting yourself. Growth is a journey, not a destination! ✨")
